@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration Form - AltSchool</title>
+  <title>AltSchool Registration</title>
+  <style>
+    /* Add your styles here */
+  </style>
 </head>
 <body>
 
   <header>
     <nav>
+      <!-- Global navigation links -->
       <ul>
-        <li><a href="about-me.html">About Me</a></li>
-        <li><a href="registration-form.html">Registration Form</a></li>
+        <li><a href="../About page/index.html">About Me</a></li>
+        <li><a href="./index.html">Registration Form</a></li>
       </ul>
     </nav>
   </header>
@@ -20,49 +24,97 @@
     <section>
       <h1>AltSchool Registration Form</h1>
       <form action="submit-form.php" method="post">
+        
+        <!-- Personal Information -->
         <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required>
+        <input type="text" id="firstName" name="firstName" required><br>
 
         <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required>
+        <input type="text" id="lastName" name="lastName" required><br>
 
         <label for="gender">Gender:</label>
-        <select id="gender" name="gender" required>
+        <select id="gender" name="gender">
           <option value="" disabled selected>Select gender</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
           <option value="other">Other</option>
-        </select>
+        </select><br>
 
         <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" required>
+        <input type="date" id="dob" name="dob" required><br>
 
+        <!-- Contact Information -->
         <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required><br>
 
-        <label for="educationLevel">Education Level:</label>
-        <select id="educationLevel" name="educationLevel" required>
+        <label for="education">Education Level:</label>
+        <select id="education" name="education">
           <option value="" disabled selected>Select level of education</option>
           <option value="highSchool">High School</option>
-          <option value="college">College</option>
-          <option value="university">University</option>
-        </select>
+          <option value="undergrad">Undergraduate</option>
+          <option value="postgrad">Postgraduate</option>
+        </select><br>
 
         <label for="country">Country:</label>
-        <select id="country" name="country" required>
-          <!-- Populate with actual countries or regions -->
+        <select id="country" name="country">
+          
           <option value="" disabled selected>Select your country</option>
-          <option value="us">United States</option>
-          <option value="ca">Canada</option>
-          <!-- Add more options as needed -->
-        </select>
+          <option value="usa">USA</option>
+          <option value="uk">UK</option>
+          <option value="Nigeria">Nigeria</option>
+          
+        </select><br>
 
-        <!-- Add more form fields as needed -->
+        <label for="stateCity">State/City of Residence:</label>
+        <input type="text" id="stateCity" name="stateCity" required><br>
 
-        <label for="termsAgreement">
-          <input type="checkbox" id="termsAgreement" name="termsAgreement" required>
-          I agree to Terms of Use and acknowledge that I have read the Privacy Policy.
-        </label>
+        <label for="employment">Employment Status:</label>
+        <select id="employment" name="employment">
+          <option value="" disabled selected>Select employment status</option>
+          <option value="employed">Employed</option>
+          <option value="unemployed">Unemployed</option>
+          <option value="student">Student</option>
+          
+        </select><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br>
+
+        <!-- School Information -->
+        <label for="school">Choose School:</label>
+        <select id="school" name="school">
+          
+          <option value="" disabled selected>Select school</option>
+          <option value="Frontend Enginerring">Frontend Enginerring </option>
+          <option value="Backend Enginerring">Backend Enginerring</option>
+          <option value="Cloud Enginerring">Cloud Enginerring</option>
+        </select><br>
+
+        <label for="course">Choose Course of Study:</label>
+        <select id="course" name="course">
+          
+          <option value="" disabled selected>Select course</option>
+          <option value="course1">Course 1</option>
+          <option value="course2">Course 2</option>
+          
+        </select><br>
+
+        <!-- Other Information -->
+        <label for="hearAbout">How did you hear about us?</label>
+        <select id="hearAbout" name="hearAbout">
+          <option value="" disabled selected>Select channel</option>
+          <option value="friend">Friend/Family</option>
+          <option value="website">Website</option>
+          <option value="socialMedia">Social Media</option>
+          
+        </select><br>
+
+        <label for="discountCode">Scholarship/Discount Code (optional):</label>
+        <input type="text" id="discountCode" name="discountCode"><br>
+
+        <!-- Agreement and Submission -->
+        <input type="checkbox" id="agreement" name="agreement" required>
+        <label for="agreement">By clicking continue, I agree to Terms of Use and acknowledge that I have read the Privacy Policy.</label><br>
 
         <button type="submit">Proceed</button>
       </form>
